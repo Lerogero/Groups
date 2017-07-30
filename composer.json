@@ -1,0 +1,12 @@
+{
+  "name": "lerogero/groups",
+  "description": "A Groups Package",
+  "authors": [
+    {
+      "name": "lerogero",
+      "email": "lerogero@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {}
+}
