@@ -2,6 +2,7 @@
 
 namespace Lerogero\Groups;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 class GroupsServiceProvider extends ServiceProvider
@@ -12,7 +13,7 @@ class GroupsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        include __DIR__ . '/routes.php';
+        $this->loadRoutesFrom(__DIR__ . '/routes.php');
     }
 
     /**
@@ -21,7 +22,7 @@ class GroupsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('Lerogero\Groups\GroupsController');
+        App::make('Lerogero\Groups\GroupsController');
         $this->loadViewsFrom(__DIR__ . '/views', 'groups');
     }
 }
